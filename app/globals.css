@@ -1,26 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fefff0;
+  --foreground: #000000;
+  --cream: #fefff0;
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #ffdc58;
+  --pink: #f3abcb;
+  --light-blue: #bae6ff;
+  --gray-light: #bebfb4;
 }
 
 @theme inline {
+  --color-cream: var(--cream);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-yellow: var(--yellow);
+  --color-pink: var(--pink);
+  --color-light-blue: var(--light-blue);
+  --color-gray-light: var(--gray-light);
+  --font-space: "Space Grotesk", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-space);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .border-brutal {
+    border: 5px solid var(--black);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-brutal-sm {
+    box-shadow: 0px 7px 0px #bebfb4;
+  }
+
+  .shadow-brutal-md {
+    box-shadow: 0px 16px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-brutal-lg {
+    box-shadow: 21px 21px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  .shadow-browser {
+    box-shadow: -9px 10px 0px rgba(0, 0, 0, 0.44);
+  }
 }
