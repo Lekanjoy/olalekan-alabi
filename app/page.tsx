@@ -41,8 +41,9 @@ export default function Home() {
         className="absolute top-[5324px] right-[920px] pointer-events-none hidden lg:block"
       />
 
-      <div className="w-full mx-auto px-4 sm:px-8 lg:px-24 xl:px-32">
-        <Navigation />
+      <Navigation />
+      
+      <div className="w-full mx-auto px-4 sm:px-8 lg:px-24 xl:px-32 pt-28 lg:pt-36">
         <Hero />
       </div>
 

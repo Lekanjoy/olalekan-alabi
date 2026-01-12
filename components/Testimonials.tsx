@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const testimonials = [
-  { id: 1, name: "Client First Name" },
-  { id: 2, name: "Client Name" },
-  { id: 3, name: "Client Name" },
-  { id: 4, name: "Client Name" },
+  { id: 1, name: "Joshua", title: "CEO, Gohangers" },
+  { id: 3, name: "Emmanuel", title: "CEO, Tourgrin" },
+  { id: 4, name: "Olakunle", title: "Co-founder, Swapspace " },
+  { id: 2, name: "Juliet", title: "Project Manager, Gohangers" },
 ];
 
 export default function Testimonials() {
@@ -23,52 +23,106 @@ export default function Testimonials() {
         />
       </div>
 
-      {/* Mobile: Stacked testimonials */}
-      <div className="lg:hidden flex flex-col gap-6">
-        {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="p-6 bg-white border-[2px] border-black"
-          >
-            <p className="text-base font-medium text-black font-space mb-4">
-              &quot;Design is a bridge that connects everyone and
-              everything&quot;
-            </p>
-            <div className="flex items-center gap-3">
-              <Image
-                src={`https://i.pravatar.cc/48?u=client${testimonial.id}`}
-                alt="Client"
-                width={48}
-                height={48}
-                className="rounded-full"
-              />
-              <div>
-                <p className="text-sm font-bold text-black font-space">
-                  {testimonial.name}
-                </p>
-                <p className="text-xs font-medium text-black font-space opacity-70">
-                  UX Designer, Company Name
-                </p>
-              </div>
+      {/* Mobile: Stacked testimonials with rotations and shadows */}
+      <div className="md:hidden flex flex-col gap-4">
+        <div className="p-6 bg-white border-[2px] border-black transform -rotate-2 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+          <p className="text-base font-medium text-black font-space mb-4">
+            &quot;Design is a bridge that connects everyone and everything&quot;
+          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://i.pravatar.cc/48?u=client1"
+              alt="Client"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <div>
+              <p className="text-sm font-bold text-black font-space">
+                {testimonials[0].name}
+              </p>
+              <p className="text-xs font-medium text-black font-space opacity-70">
+                {testimonials[0].title}
+              </p>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="p-6 bg-white border-[2px] border-black transform rotate-1 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+          <p className="text-base font-medium text-black font-space mb-4">
+            &quot;Design is a bridge that connects everyone and everything&quot;
+          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://i.pravatar.cc/48?u=client2"
+              alt="Client"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <div>
+              <p className="text-sm font-bold text-black font-space">
+                {testimonials[1].name}
+              </p>
+              <p className="text-xs font-medium text-black font-space opacity-70">
+                {testimonials[1].title}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6 bg-white border-[2px] border-black transform -rotate-1 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+          <p className="text-base font-medium text-black font-space mb-4">
+            &quot;Design is a bridge that connects everyone and everything&quot;
+          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://i.pravatar.cc/48?u=client3"
+              alt="Client"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <div>
+              <p className="text-sm font-bold text-black font-space">
+                {testimonials[2].name}
+              </p>
+              <p className="text-xs font-medium text-black font-space opacity-70">
+                {testimonials[2].title}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6 bg-white border-[2px] border-black transform rotate-2 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+          <p className="text-base font-medium text-black font-space mb-4">
+            &quot;Design is a bridge that connects everyone and everything&quot;
+          </p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://i.pravatar.cc/48?u=client4"
+              alt="Client"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <div>
+              <p className="text-sm font-bold text-black font-space">
+                {testimonials[3].name}
+              </p>
+              <p className="text-xs font-medium text-black font-space opacity-70">
+                {testimonials[3].title}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Desktop: Overlapping testimonials */}
-      <div className="hidden lg:block relative min-h-[800px]">
-        <Image
-          src="/images/testimonials-bg.svg"
-          alt=""
-          width={1234}
-          height={814}
-          className="w-full h-auto"
-        />
-
-        <div className="absolute top-12 left-12 max-w-md p-8 bg-white border-[3px] border-black transform -rotate-2">
-          <p className="text-xl font-medium text-black font-space mb-6">
-            &quot;Design is a bridge that connects everyone and
-            everything&quot;
+      {/* Desktop: Grid-based testimonials with scattered effect */}
+      <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="p-6 lg:p-8 bg-white border-[3px] border-black transform -rotate-2">
+          <p className="text-lg lg:text-xl font-medium text-black font-space mb-6">
+            &quot;Design is a bridge that connects everyone and everything&quot;
           </p>
           <div className="flex items-center gap-4">
             <Image
@@ -79,20 +133,19 @@ export default function Testimonials() {
               className="rounded-full"
             />
             <div>
-              <p className="text-lg font-bold text-black font-space">
-                Client First Name
+              <p className="text-base lg:text-lg font-bold text-black font-space">
+                {testimonials[0].name}
               </p>
-              <p className="text-base font-medium text-black font-space opacity-70">
-                UX Designer, Company Name
+              <p className="text-sm lg:text-base font-medium text-black font-space opacity-70">
+                {testimonials[0].title}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute top-12 right-12 max-w-md p-8 bg-white border-[3px] border-black transform rotate-1">
-          <p className="text-xl font-medium text-black font-space mb-6">
-            &quot;Design is a bridge that connects everyone and
-            everything&quot;
+        <div className="p-6 lg:p-8 bg-white border-[3px] border-black transform rotate-1">
+          <p className="text-lg lg:text-xl font-medium text-black font-space mb-6">
+            &quot;Design is a bridge that connects everyone and everything&quot;
           </p>
           <div className="flex items-center gap-4">
             <Image
@@ -103,20 +156,19 @@ export default function Testimonials() {
               className="rounded-full"
             />
             <div>
-              <p className="text-lg font-bold text-black font-space">
-                Client Name
+              <p className="text-base lg:text-lg font-bold text-black font-space">
+                {testimonials[1].name}
               </p>
-              <p className="text-base font-medium text-black font-space opacity-70">
-                UX Designer, Company Name
+              <p className="text-sm lg:text-base font-medium text-black font-space opacity-70">
+                {testimonials[1].title}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-32 left-12 max-w-md p-8 bg-white border-[3px] border-black transform -rotate-1">
-          <p className="text-xl font-medium text-black font-space mb-6">
-            &quot;Design is a bridge that connects everyone and
-            everything&quot;
+        <div className="p-6 lg:p-8 bg-white border-[3px] border-black transform -rotate-1">
+          <p className="text-lg lg:text-xl font-medium text-black font-space mb-6">
+            &quot;Design is a bridge that connects everyone and everything&quot;
           </p>
           <div className="flex items-center gap-4">
             <Image
@@ -127,20 +179,19 @@ export default function Testimonials() {
               className="rounded-full"
             />
             <div>
-              <p className="text-lg font-bold text-black font-space">
-                Client Name
+              <p className="text-base lg:text-lg font-bold text-black font-space">
+                {testimonials[2].name}
               </p>
-              <p className="text-base font-medium text-black font-space opacity-70">
-                UX Designer, Company Name
+              <p className="text-sm lg:text-base font-medium text-black font-space opacity-70">
+                {testimonials[2].title}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-12 right-32 max-w-md p-8 bg-white border-[3px] border-black transform rotate-2">
-          <p className="text-xl font-medium text-black font-space mb-6">
-            &quot;Design is a bridge that connects everyone and
-            everything&quot;
+        <div className="p-6 lg:p-8 bg-white border-[3px] border-black transform rotate-2">
+          <p className="text-lg lg:text-xl font-medium text-black font-space mb-6">
+            &quot;Design is a bridge that connects everyone and everything&quot;
           </p>
           <div className="flex items-center gap-4">
             <Image
@@ -151,11 +202,11 @@ export default function Testimonials() {
               className="rounded-full"
             />
             <div>
-              <p className="text-lg font-bold text-black font-space">
-                Client Name
+              <p className="text-base lg:text-lg font-bold text-black font-space">
+                {testimonials[3].name}
               </p>
-              <p className="text-base font-medium text-black font-space opacity-70">
-                UX Designer, Company Name
+              <p className="text-sm lg:text-base font-medium text-black font-space opacity-70">
+                {testimonials[3].title}
               </p>
             </div>
           </div>

@@ -5,25 +5,25 @@ const services = [
     icon: "/icons/star-service.svg",
     iconSize: { width: 31, height: 27, lgWidth: 43, lgHeight: 37 },
     bgColor: "bg-yellow",
-    title: "User Research",
+    title: "Product & Requirement Analysis",
   },
   {
     icon: "/icons/hash-service.svg",
     iconSize: { width: 35, height: 40, lgWidth: 48, lgHeight: 55 },
     bgColor: "bg-[#c084fc]",
-    title: "Wireframing",
+    title: "Component Architecture",
   },
   {
     icon: "/icons/heart-service.svg",
     iconSize: { width: 22, height: 33, lgWidth: 30, lgHeight: 44 },
     bgColor: "bg-[#f87171]",
-    title: "UI Designing",
+    title: "UI Engineering",
   },
   {
     icon: "/icons/star-blue-service.svg",
     iconSize: { width: 34, height: 28, lgWidth: 46, lgHeight: 39 },
     bgColor: "bg-light-blue",
-    title: "Prototyping",
+    title: "Interactive Experiences",
   },
 ];
 
@@ -39,16 +39,16 @@ export default function Services() {
           alt="Smiley"
           width={58}
           height={58}
-          className="shrink-0 lg:w-[73px] lg:h-[68px]"
+          className="shrink-0 lg:w-18.25 lg:h-17"
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] border-y-[2px] lg:border-y-[3px] border-black">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] border-y-2 lg:border-y-[3px] border-black">
         {/* Stats Column */}
-        <div className="border-r-0 lg:border-r-[2px] lg:border-r-[3px] border-black">
-          <div className="p-6 lg:p-10 border-b-[2px] lg:border-b-[3px] border-black">
+        <div className="border-r-0 lg:border-r-[3px] border-black">
+          <div className="p-6 lg:p-10 border-b-2 lg:border-b-[3px] border-black">
             <p className="text-[34px] lg:text-5xl font-medium text-black font-space mb-1">
-              39
+              100+
             </p>
             <p className="text-base lg:text-2xl font-medium text-black font-space">
               Projects
@@ -56,7 +56,7 @@ export default function Services() {
           </div>
           <div className="p-6 lg:p-10">
             <p className="text-[34px] lg:text-5xl font-medium text-black font-space mb-1">
-              100k+
+              10k+
             </p>
             <p className="text-base lg:text-2xl font-medium text-black font-space">
               generated
@@ -71,7 +71,7 @@ export default function Services() {
               key={service.title}
               className={`p-6 lg:p-10 ${
                 index < services.length - 1
-                  ? "border-b-[2px] lg:border-b-[3px] border-black"
+                  ? "border-b-2 lg:border-b-[3px] border-black"
                   : ""
               }`}
             >
@@ -92,12 +92,6 @@ export default function Services() {
               <p className="text-base lg:text-2xl font-medium text-black font-space mb-4 lg:mb-6">
                 Services we&apos;re providing that derive 99% result
               </p>
-              <a
-                href="#"
-                className="text-[26px] lg:text-4xl font-medium text-black font-space hover:underline"
-              >
-                Learn more
-              </a>
             </div>
           ))}
         </div>

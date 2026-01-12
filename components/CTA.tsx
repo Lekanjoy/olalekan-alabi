@@ -12,10 +12,10 @@ export default function CTA() {
           className="absolute -top-8 -right-8 lg:-top-12 lg:-right-12 lg:w-[100px] lg:h-[100px]"
         />
         <h2 className="text-lg lg:text-5xl font-medium text-black font-space text-center mb-4 lg:mb-6">
-          Let&apos;s start designing your project
+          Let&apos;s start building your project
         </h2>
         <p className="text-[13px] lg:text-3xl font-normal text-black font-space text-center mb-8 lg:mb-12 max-w-sm lg:max-w-none mx-auto">
-          Want to see how to transform your brand into a unique style. sent us a
+          Want to see how to transform your brand into a unique style? Send us a
           message
         </p>
         <div className="flex justify-center relative">
