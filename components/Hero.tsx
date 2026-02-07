@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Lightbulb } from "lucide-react";
 import { GiSpikyExplosion } from "react-icons/gi";
-20;
+import Typewriter from "./Typewriter";
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="my-12 lg:my-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8  xl:gap-16">
@@ -12,17 +14,19 @@ export default function Hero() {
           width={80}
           height={80}
         />
-        <h1 className="text-[42px] leading-tight xl:text-[60px] 2xl:text-[80px] font-normal text-black font-space mb-6 lg:mb-8 relative z-10">
+        <h1 className="text-[42px] leading-tight  xl:text-[60px] 2xl:text-[80px] font-normal text-black font-space mb-6 lg:mb-8 relative z-10">
           I build top notch{" "}
-          <span className="relative inline md:ml-2">
-            webapps
+          <span className="relative inline mb-5 md:ml-2">
+            <Typewriter
+              words={["webapps", "websites", "apps", "experiences"]}
+            />
             <span className="absolute bottom-2 lg:-bottom-1.5 left-0 right-0 h-4.5 lg:h-11 bg-yellow -z-10"></span>
           </span>
         </h1>
         <div className="relative inline-block">
-          <button className="px-8 py-3 lg:px-16 lg:py-6 bg-light-blue rounded-full text-base lg:text-3xl font-bold text-black font-space border-[3px] lg:border-[5px] border-black shadow-[0px_8px_0px_rgba(0,0,0,0.25)] lg:shadow-[0px_16px_0px_rgba(0,0,0,0.25)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+          <Link href="#portfolio" className="px-8 py-3 lg:px-16 lg:py-6 bg-light-blue rounded-full text-base lg:text-3xl font-bold text-black font-space border-[3px] lg:border-[5px] border-black shadow-[0px_8px_0px_rgba(0,0,0,0.25)] lg:shadow-[0px_16px_0px_rgba(0,0,0,0.25)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
             See Portfolio
-          </button>
+          </Link>
           <Image
             src="/decorations/small-lines.svg"
             alt=""

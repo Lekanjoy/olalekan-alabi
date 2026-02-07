@@ -7,6 +7,8 @@ import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -42,7 +44,7 @@ export default function Home() {
       />
 
       <Navigation />
-      
+
       <div className="w-full mx-auto px-4 sm:px-8 lg:px-24 xl:px-32 pt-28 lg:pt-36">
         <Hero />
       </div>
@@ -50,10 +52,12 @@ export default function Home() {
       <ToolsBar />
 
       <div className="w-full mx-auto px-4 sm:px-8 lg:px-24 xl:px-32">
+        <About />
         <Services />
         <Portfolio />
         <Testimonials />
         <CTA />
+        <Contact />
       </div>
 
       <Footer />

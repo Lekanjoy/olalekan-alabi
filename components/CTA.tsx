@@ -19,9 +19,9 @@ export default function CTA() {
           message
         </p>
         <div className="flex justify-center relative">
-          <button className="px-8 py-3 lg:px-16 lg:py-6 bg-light-blue rounded-full text-base lg:text-3xl font-bold text-black font-space border-[3px] lg:border-[5px] border-black hover:translate-x-1 hover:translate-y-1 transition-all">
-            See Portfolio
-          </button>
+          <a href="#contact" className="px-8 py-3 lg:px-16 lg:py-6 bg-light-blue rounded-full text-base lg:text-3xl font-bold text-black font-space border-[3px] lg:border-[5px] border-black hover:translate-x-1 hover:translate-y-1 transition-all">
+            Send a Message
+          </a>
           <Image
             src="/decorations/small-lines.svg"
             alt=""

@@ -37,7 +37,7 @@ export default function Navigation() {
             <span className="absolute -bottom-2 left-0 right-0 h-2 lg:h-2.5 bg-yellow -z-10"></span>
           </a>
           <a
-            href="#hire"
+            href="#contact"
             className="text-lg lg:text-2xl font-medium text-black font-space hover:opacity-70 transition"
           >
             Contact
@@ -50,19 +50,16 @@ export default function Navigation() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <div
-            className={`w-6 h-0.5 bg-black mb-1.5 transition-transform ${
-              isMenuOpen ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`w-6 h-0.5 bg-black mb-1.5 transition-transform ${isMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
           ></div>
           <div
-            className={`w-6 h-0.5 bg-black mb-1.5 transition-opacity ${
-              isMenuOpen ? "opacity-0" : ""
-            }`}
+            className={`w-6 h-0.5 bg-black mb-1.5 transition-opacity ${isMenuOpen ? "opacity-0" : ""
+              }`}
           ></div>
           <div
-            className={`w-6 h-0.5 bg-black transition-transform ${
-              isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
           ></div>
         </button>
       </nav>
@@ -77,9 +74,8 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l-[3px] border-black shadow-[-4px_0px_0px_rgba(0,0,0,0.25)] z-40 transform transition-transform duration-300 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`md:hidden fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l-[3px] border-black shadow-[-4px_0px_0px_rgba(0,0,0,0.25)] z-40 transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col gap-6 p-8 pt-32">
           <a
@@ -98,7 +94,7 @@ export default function Navigation() {
             <span className="absolute -bottom-2 left-0 right-0 h-2.5 bg-yellow -z-10"></span>
           </a>
           <a
-            href="#hire"
+            href="#contact"
             className="text-2xl font-medium text-black font-space hover:opacity-70 transition"
             onClick={() => setIsMenuOpen(false)}
           >
